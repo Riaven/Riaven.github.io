@@ -1,0 +1,245 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+{% block content %}
+{% csrf_token %}
+<div class="slider">
+    <ul class="slides">
+        <li>
+            <img src="{% static 'imagenes/adoptados/Apolo.jpg' %}" class="responsive-img" alt="Apolo">
+            <div class="caption right-align">
+
+                <h4 class=" right light white-text text-lighten-3">"Mientras más gente <br>
+                    conozco, más quiero a <br> mi Apolo"</h4>
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'imagenes/adoptados/Tom.jpg' %}" class="responsive-img" alt="tom">
+            <div class="caption left-align">
+                <h3 class=" left light black-text text-lighten-3">"Estamos felices <br> de tener a Tom en <br> casa. Es
+                    un súper <br> fiel compañero"</h3>
+
+            </div>
+        </li>
+        <li>
+            <img src="{% static 'imagenes/adoptados/Duque.jpg' %}" class="responsive-img" alt="duque">
+            <div class="caption right-align">
+                <p>
+                    <h4 class=" light black-text text-lighten-5">"Nadie puede cambiar <br>lo lindo que <br> es adoptar
+                        a un <br> perro sin hogar."</h4>
+                </p>
+
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<div class="row" id="info">
+
+
+    <div class="col s12" align="center">
+
+        <img src="{% static 'imagenes/img/iconos.png' %}" class="responsive-img" alt="icono">
+
+    </div>
+
+
+</div>
+
+<br>
+
+<div class="row" id="rescrow">
+
+    <div class="col s6" align="right">
+        <h4 id=titulo align="right">RESCATE</h4>
+        <h6 id="subtitulo">ETAPA UNO</h6>
+        <br>
+        <hr width="8%" align="right" id="hrs">
+        <br>
+        <h6 id="descr">Rescatamos perros en situación de peligro y/o abandono. Los rehabilitamos y los preparamos para
+            buscarles un hogar.</h6>
+        <br>
+        <img src="{% static 'imagenes/img/rescate.jpg' %}" class="responsive-img" alt="rescate">
+    </div>
+
+    <div class="col s6">
+        <img src="{% static 'imagenes/img/crowfunding.jpg' %}" class="responsive-img" id="comida" alt="comida">
+        <h4 id=titulo>CROWDFUNDING</h4>
+        <h6 id="subtitulo">FINANCIAMIENTO</h6>
+        <br>
+        <hr width="8%" align="left" id="hrs">
+        <br>
+        <h6 id="descr">Sigue nuestras redes sociales para informarte acerca de las diversas campañas y actividades que
+            realizamos para obtener financiamiento para seguir ayudando.</h6>
+        <br>
+        <a href="#" class="waves-effect waves-teal btn-flat" id="btncam">Campañas</a>
+       
+        
+
+        
+
+    </div>
+</div>
+<br>
+<br>
+
+<div class="row " id="rescataditos">
+
+    <div class="col s4">
+
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Oso.jpg' %}" alt="oso" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- OSO - <br> Me gusta mucho jugar!, <br> espero pronto encontrar un hogar">
+        </div>
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Maya.jpg' %}" alt="maya" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- MAYA - <br> Me gusta un montón regalonear, <br>soy de raza pequeña, prometo no molestar">
+        </div>
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Wifi.jpg' %}" alt="wifi" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- WIFI - <br> Tengo 10 meses, quiero encontrar un hogar, <br> estaremos por siempre conectados!">
+        </div>
+
+
+    </div>
+
+
+    <div class="col s4">
+
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Chocolate.jpg' %}" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- CHOCOLATE - <br> He sido rescatado desde la calle, no conozco <br> lo que es un hogar, pero me adaptaré">
+        </div>
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Pexel.jpg' %}" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- PEXEL - <br> Soy pequeño así que no haré tanta molestia, <br> te seguiré donde vayas!">
+        </div>
+
+    </div>
+
+
+
+    <div class="col s4">
+
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Bigotes.jpg' %}" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="right" data-tooltip="- BIGOTES - <br> Mi antiguo dueño ha fallecido, <br> lo extraño, pero quiero  <br> tener de nuevo una familia, <br> mi peluche y yo te esperamos!">
+        </div>
+        <div class="col s12 m6 14">
+            <img src="{% static 'imagenes/rescatados/Luna.jpg' %}" width="250" class="responsive-img card materialboxed tooltipped"
+                data-position="bottom" data-tooltip="- LUNA - <br> Soy un cachorro de aproximadamente <br> 5 meses, espero encontrar un hogar!">
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<br><br><br><br>
+<div class="row center">
+    <h1><b>Galería de mascotas :)</b> </h1>
+</div>
+
+{% if rescatados %}
+<div class="row">
+
+    <div class="center"><h2 > <i>Disponible para adoptar!</i> </h2></div>
+    {% for rescatado in rescatados %}
+
+    
+    {% if rescatado.estado.nombre == 'Disponible' %}
+    <div class="col s3">
+        <div class="card " >
+
+            <div class="card-image  waves-block waves-light">
+                    <img class="responsive-img activator" src="{% static 'imagenes/rescatados' %}/{{rescatado.fotografia}}" alt="rescatado" style="width: 100%; height: 100%" />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">more_vert</i></span>
+                <p><a href="{% url 'rescatado_listar' %}">QUIERO ADOPTAR!</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">close</i></span>
+                <p align=justify>{{ rescatado.descripcion }}</p>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div>
+    <br><br><br>
+<div class="row">    
+    <div class="center"> <h2>  <i>Rescatados, disponibles pronto!</i> </h2></div>
+    {% for rescatado in rescatados %}
+
+    
+    {% if rescatado.estado.nombre == 'Rescatado' %}
+    <div class="col s3">
+        <div class="card " >
+
+            <div class="card-image  waves-block waves-light">
+                    <img class="responsive-img activator" src="{% static 'imagenes/rescatados' %}/{{rescatado.fotografia}}" alt="rescatado"  />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">more_vert</i></span>
+                <p><a href="{% url 'rescatado_listar' %}">QUIERO ADOPTAR!</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">close</i></span>
+                <p align=justify>{{ rescatado.descripcion }}</p>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div>
+    <br><br><br>
+<div class="row">   
+    <div class="center"><h2> <i>Adoptados :)</i> </h2></div>
+    {% for rescatado in rescatados %}
+
+    
+    {% if rescatado.estado.nombre == 'Adoptado' %}
+    <div class="col s3">
+        <div class="card " >
+
+            <div class="card-image  waves-block waves-light">
+                    <img class="responsive-img activator" src="{% static 'imagenes/rescatados' %}/{{rescatado.fotografia}}" alt="rescatado"  />
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">more_vert</i></span>
+                <p><a href="{% url 'rescatado_listar' %}">QUIERO ADOPTAR!</a></p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">{{ rescatado.nombre }}<i class="material-icons right">close</i></span>
+                <p align=justify>{{ rescatado.descripcion }}</p>
+            </div>
+
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div> 
+    <br><br><br>
+
+   
+
+{% else %}
+<h1>No hay registros de rescatados</h1>
+
+{% endif %}
+
+
+
+{% endblock %}

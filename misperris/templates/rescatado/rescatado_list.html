@@ -1,0 +1,72 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+
+{% block title %} LISTA DE RESCATADOS {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br>
+    <div class="row center">
+        <h1>Lista de Rescatados</h1>
+    </div>
+    {% if request.user.is_superuser %}
+    <div class="row right">
+        <a class="btn waves-effect waves-light " href="{% url 'rescatado_crear' %}">Nuevo
+            <i class="material-icons right">add</i>
+        </a>
+    </div>
+    {% endif %}
+    <br><br><br>
+    {% if rescatados %}
+    {% for rescatado in rescatados %}
+    <div class="row ">
+        <div class="divider"></div>
+
+       
+        <div class="col s4">
+            <img class="responsive-img" src="{% static 'imagenes/rescatados' %}/{{rescatado.fotografia}}" alt="rescatado" style="width: 100%; height: 100%" />
+
+            <br>
+
+        </div>
+
+        <div class="col s8">
+
+
+            <h5>{{ rescatado.nombre }} -- {{ rescatado.raza }}</h5>
+            <br>
+            <i>{{ rescatado.descripcion }}</i>
+            <br><br>
+            {{ rescatado.estado }}
+            <br><br>
+            {% if request.user.is_superuser %}
+            <a class="btn waves-effect waves-light green" href="{% url 'rescatado_editar' rescatado.id %}">Editar
+                <i class="material-icons right">edit</i>
+            </a>
+            <a class="btn waves-effect waves-light red" href="{% url 'rescatado_eliminar' rescatado.id %}">Eliminar
+                <i class="material-icons right">delete</i>
+            </a>
+            {% endif %}
+            {% if rescatado.estado.nombre == 'Disponible' %}
+            <a class="btn waves-effect waves-light blue" href="">Adoptar ❤</a>
+            {% endif %}
+            {% if rescatado.estado.nombre == 'Rescatado' %}
+            <a class="btn waves-effect waves-light blue disabled" href="">Disponible pronto :)</a>
+            {% endif %}
+
+        </div>
+
+
+    </div>
+
+    {% endfor %}
+
+    {% else %}
+    <h1>No hay registros de rescatados</h1>
+
+    {% endif %}
+</div>
+
+{% endblock %}

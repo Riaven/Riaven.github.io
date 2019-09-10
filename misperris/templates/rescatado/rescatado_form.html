@@ -1,0 +1,45 @@
+<!--
+    
+-->
+<!--Para heredar de la plantilla base el diseño de la pag-->
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+
+{% block title %} CREAR RESCATADO {% endblock %}
+
+<!--Para cambiar el contenido que se encuentra en esta pag-->
+{% block content %}
+<div class="container">
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="row center">
+            <h1>Agregar nuevo rescatado</h1>
+        </div>
+        
+
+        {{ form.nombre|materializecss:'s6' }}
+        {{ form.descripcion|materializecss:'s6' }}
+        {{ form.fotografia|materializecss:'s6' }}
+        {{ form.raza|materializecss:'s6' }}
+        {{ form.estado|materializecss:'s6' }}
+
+        <div class="row center">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Guardar
+                <i class="material-icons right">done</i>
+            </button>
+
+            <a class="btn waves-effect waves-light red" href="{% url 'rescatado_listar' %}">Cancelar
+                <i class="material-icons right">keyboard_backspace</i>
+            </a>
+
+        </div>
+
+        
+
+    </form>
+</div>
+
+{% endblock %}

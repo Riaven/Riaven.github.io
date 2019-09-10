@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+
+{% block title %} QUIENES SOMOS {% endblock %}
+
+{% block content %}
+
+
+
+
+	<div class="container">
+        <div row="row center"></div>
+            <div class="row" id="rescrow">
+                <div class="col s6" align="right">
+                    <br><br><br><br><br><br>
+                    <img src="{% static 'imagenes/adoptados/Duque.jpg' %}" class="responsive-img" alt="duque"> 
+                    <br>
+                </div>
+    
+                <div class="col s6">
+                    <h4 id=titulo style='color:rgb(96, 184, 153);'>Quienes Somos</h4>
+                    <h6 id="descr">Somos personas preocupadas del bienestar animal, especialmente de
+                        perros, con años de experiencia en rescate, rehabilitacion y adopcion.
+                        Nuestro equipo está formado por profesionales de istintas áreas con un
+                        fin común, ayudar a los perros abandonados no imortando su estado de salud,
+                        fisico ni edad.
+                    </h6>
+                    <br>
+                    <h4 id=titulo style='color:rgb(96, 184, 153);'>Mision</h4>
+                    <h6 id="descr"> Rescatar animales en situacion de riesgo y abandono,esterilizados,rehabilitarlos e
+                        incorporarlos a fammilias definitivas.
+                        Dar la oportunidad de tener un final digno a perros ancianos terminales abandonados en
+                        un hogar de acogida con todos los cuidados requeridoc según su condición.
+                    </h6>
+                    <br>
+                    <h4 id=titulo; style='color:rgb(96, 184, 153);'>Vision</h4>
+                    <h6 id="descr"> Lograr crear conciencia en nuestra sociedad respecto a la realidad de perros en situación
+                        de calle, lograno un cambio de actitud a través del ejemplo de buenas prácticas en tendencia
+                        responsable de mascotas.
+                        Concretar alianzas estratégicas que nos permiten dearrollar actividades de rehabilitación y
+                        reinserción de animales abandonados con discapacidad físicas.
+                    </h6>
+                </div>
+            </div>
+    </div>
+
+
+{% endblock %}

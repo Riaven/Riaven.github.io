@@ -1,0 +1,36 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+
+{% block title %} CONTÁCTANOS {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div row="row center"></div>
+        <div class="row" id="rescrow">  
+            <div class="col s6"><br><br><br><br>
+				<h3 id=titulo style='color:rgb(96, 184, 153);'>Contáctenos</h3> 
+				<h5 style='color:rgb(96, 184, 153);'>Rescates y Adopciones</h5>
+				<h5 style='color:rgb(96, 184, 153);'>Correo: MisPerris@gmail.com</h5>
+				<h5  style='color:rgb(96, 184, 153);'>Fono: 24569743</h5>
+				   
+	</div>
+	<div class="col s6" align="right">
+
+		<br><br><br><br>
+		<img src="{% static 'imagenes/adoptados/tom.jpg' %}" class="responsive-img" alt="duque"> 
+		<br>
+	</div>
+	<br>
+	<br>
+	<br>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}

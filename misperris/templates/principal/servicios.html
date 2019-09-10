@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+{% load materializecss %}
+
+{% block title %} SERVICIOS {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div row="row center"></div>
+        <div class="row" id="rescrow">
+
+            <div class="col s6" align="right">
+
+                <br><br><br><br>
+                <img src="{% static 'imagenes/adoptados/tom.jpg' %}" class="responsive-img" alt="duque"> 
+                <br>
+            </div>
+            <br>
+            <br>
+            <br>
+            
+            <div class="col s6">
+                <h4 id=titulo style='color:rgb(96, 184, 153);'>Servicios</h4>
+                <h6 id="descr">Mascotas A Salvo (MAS)
+                    Fundación Mis Perris ofrece a empresas o compañías, condominios residenciales, instituciones
+                     y organizaciones el servicio de rescate, recuperación y reubicación de mascotas que viven en 
+                     dichos establecimientos o en sus alrededores, solucionando así el problema de presencia de mascotas 
+                     abandonados en los lugares de trabajo o residencia.
+                    
+                    Además, esta acción puede pasar a formar parte de la Responsabilidad Social Empresarial
+                     de las compañías, y aportar una solución al problema país de la sobrepoblación de animales 
+                     con presencia en las calles, problema que genera graves consecuencias sanitarias y extra 
+                     sanitarias para toda la comunidad.</h6>
+        
+                </h6>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+{% endblock %}
